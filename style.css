@@ -43,7 +43,7 @@ body {
   flex-wrap: wrap;
   align-content: space-around;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .card {
@@ -54,7 +54,7 @@ body {
   margin-bottom: 30px;
   padding: 15px 15px 15px 15px;
   border: solid 1px black;
-  border-radius: 15px;
+  border-radius: 15px 5px 10px 25px;
   box-shadow: 0 0 5px 1px orangered;
   width: 550px;
   height: 450px;
@@ -64,7 +64,7 @@ body {
   max-width: 100%;
 }
 .card__text-content {
-  text-align: right;
+  text-align: center;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -73,7 +73,12 @@ body {
   overflow-y: auto;
 }
 .card__attribute {
+  font-weight: bold;
   margin-top: auto;
+}
+
+.card:nth-child(2n) {
+  flex-direction: row-reverse;
 }
 
 @media screen and (max-width: 650px) {
